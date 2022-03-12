@@ -1,0 +1,53 @@
+#navbar_container {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#right_icons {
+  display: flex;
+  justify-content: center;
+}
+#image_icon {
+  border: 1px solid black;
+  padding: 10px;
+}
+#menu_icons {
+  display: flex;
+  gap: 30px;
+  margin-left: 30px;
+  font-size: 17px;
+  font-weight: 600;
+}
+#left_icons {
+  display: flex;
+  gap: 25px;
+  margin-right: 20px;
+  border: 1px solid black;
+  align-items: center;
+}
+.button_login {
+  padding: 0 20px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: 600;
+}
+.button_login:hover {
+  color: white;
+  background-color: black;
+}
+
+.button_getapp {
+  padding: 0 20px;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+}
+.button_getapp:hover {
+  background-color: white;
+  color: black;
+}
