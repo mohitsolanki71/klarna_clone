@@ -85,3 +85,19 @@
   width: 100%;
   height: 200px;
 }
+
+@media (max-width: 1024px) {
+  #bottom_left {
+    display: none;
+  }
+
+  #bottom_right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  #all_products {
+    grid-template-columns: repeat(2, 40%);
+  }
+}
