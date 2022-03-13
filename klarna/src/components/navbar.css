@@ -99,21 +99,3 @@
 .category_text {
   font-size: 20px;
 }
-
-/* page responsiveness */
-
-@media (max-width: 1024px) {
-  #menu_icons {
-    display: none;
-  }
-
-  #menu_symbol {
-    display: block;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-
-  .button_getapp {
-    display: none;
-  }
-}
