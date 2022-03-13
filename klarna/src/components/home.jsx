@@ -3,6 +3,7 @@ import "./home.css";
 
 export const Home = () => {
   const [data, setData] = useState([]);
+  const [featured, setFeatured] = useState(false);
 
   useEffect(() => {
     getData();
@@ -19,6 +20,14 @@ export const Home = () => {
     } catch (er) {}
   };
 
+  const handleFeatured = () => {
+    if (featured) {
+      setFeatured(false);
+    } else {
+      setFeatured(true);
+    }
+    console.log("featured");
+  };
   return (
     <div id="home_container">
       <div id="top">
@@ -97,7 +106,26 @@ export const Home = () => {
           <hr></hr>
           <div id="total_item">
             <p>20 items</p>
-            <p>Featured</p>
+            <div id="featured" onClick={handleFeatured}>
+              <p id="featured_title">Featured</p>
+              <div id="featured_inner">
+                {featured ? (
+                  <>
+                    <div>
+                      <input type="checkbox"></input> <label>Featured</label>
+                    </div>
+                    <div>
+                      <input type="checkbox"></input> <label>A-z</label>
+                    </div>
+                    <div>
+                      <input type="checkbox"></input> <label>Newest</label>
+                    </div>
+                  </>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            </div>
           </div>
           <div id="all_products">
             {data.map((e, i) => (
@@ -106,7 +134,7 @@ export const Home = () => {
                 <p className="product_name">
                   <b>{e.title}</b>
                 </p>
-                <p>₹{e.price}</p>
+                <p className="product_price">₹{e.price}</p>
               </div>
             ))}
           </div>
