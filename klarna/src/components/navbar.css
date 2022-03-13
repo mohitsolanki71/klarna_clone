@@ -1,8 +1,8 @@
 #navbar_container {
   display: flex;
-  border: 1px solid black;
   justify-content: space-between;
   padding: 10px;
+  border-bottom: 1px solid rgb(247, 238, 238);
 }
 
 #right_icons {
@@ -10,8 +10,8 @@
   justify-content: center;
 }
 #image_icon {
-  border: 1px solid black;
   padding: 10px;
+  cursor: pointer;
 }
 #menu_icons {
   display: flex;
@@ -20,8 +20,10 @@
   font-size: 17px;
   font-weight: 600;
 }
-#menu_icons p {
+#menu_icons p:hover {
   cursor: pointer;
+  color: #267a9c;
+  text-decoration: underline;
 }
 #menu_symbol {
   display: none;
@@ -30,7 +32,6 @@
   display: flex;
   gap: 25px;
   margin-right: 20px;
-  border: 1px solid black;
   align-items: center;
 }
 .button_login {
@@ -62,12 +63,15 @@
 
 #dropdown_menu {
   display: flex;
-  border: 1px solid red;
   padding: 0px 11%;
   gap: 13%;
   text-align: left;
   height: 450px;
   transition: 0.5s;
+}
+#dropdown_menu p:hover {
+  cursor: pointer;
+  color: #267a9c;
 }
 
 #dropdown_part1 p {

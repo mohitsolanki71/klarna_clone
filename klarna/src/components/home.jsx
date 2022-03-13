@@ -31,7 +31,7 @@ export const Home = () => {
   return (
     <div id="home_container">
       <div id="top">
-        <p id="heading">All deals and coupons</p>
+        <p id="heading">All deals and coupons.</p>
         <p id="sentence">
           The best online deals and coupons, including Klarna exclusives,
           updated daily.
@@ -107,7 +107,7 @@ export const Home = () => {
           <div id="total_item">
             <p>20 items</p>
             <div id="featured" onClick={handleFeatured}>
-              <p id="featured_title">Featured</p>
+              <p id="featured_title">Featured ˅</p>
               <div id="featured_inner">
                 {featured ? (
                   <>
