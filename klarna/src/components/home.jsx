@@ -11,7 +11,7 @@ export const Home = () => {
 
   const getData = () => {
     try {
-      fetch("https://fakestoreapi.com/products")
+      fetch("https://guarded-river-02224.herokuapp.com/product")
         .then((d) => d.json())
         .then((res) => {
           setData(res);
@@ -105,20 +105,32 @@ export const Home = () => {
           <input id="search_box" type="text" placeholder="Search"></input>
           <hr></hr>
           <div id="total_item">
-            <p>20 items</p>
+            <p>{data.length} deals</p>
             <div id="featured" onClick={handleFeatured}>
               <p id="featured_title">Featured ˅</p>
               <div id="featured_inner">
                 {featured ? (
                   <>
                     <div>
-                      <input type="checkbox"></input> <label>Featured</label>
+                      <input
+                        type="checkbox"
+                        className="featured_checkbox"
+                      ></input>{" "}
+                      <label>Featured</label>
                     </div>
                     <div>
-                      <input type="checkbox"></input> <label>A-z</label>
+                      <input
+                        type="checkbox"
+                        className="featured_checkbox"
+                      ></input>{" "}
+                      <label>A-z</label>
                     </div>
                     <div>
-                      <input type="checkbox"></input> <label>Newest</label>
+                      <input
+                        type="checkbox"
+                        className="featured_checkbox"
+                      ></input>{" "}
+                      <label>Newest</label>
                     </div>
                   </>
                 ) : (
@@ -129,12 +141,18 @@ export const Home = () => {
           </div>
           <div id="all_products">
             {data.map((e, i) => (
-              <div className="product_container">
+              <div key={i} className="product_container">
                 <img className="product_image" src={e.image} alt="#"></img>
-                <p className="product_name">
-                  <b>{e.title}</b>
-                </p>
-                <p className="product_price">₹{e.price}</p>
+                <div className="discount_div">
+                  <p>Save</p>
+                  <p className="percent">{e.discount}%</p>
+                </div>
+                <div className="product_details">
+                  <p className="company_name">
+                    <b>{e.company}</b>
+                  </p>
+                  <p className="product_des">{e.description}</p>
+                </div>
               </div>
             ))}
           </div>
